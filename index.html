@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Bài Tập Javacript 2</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+    <h3 class="alert alert-warning">
+        Bài tập 1 tính tiền lương nhân viên 
+        <p>lương 1 ngày : 100000</p>
+        <p>cho người dùng nhập vào số ngày làm</p>
+        <p>công thức tính lương : lương 1 ngày * số ngày làm</p>
+    </h3>
+    <div class="from-group row">
+        <div class="col-4">
+        <p>Nhập vào tiền lương</p>
+        <input id="luongNgay" class="form-control" value="">
+        </div>
+        <div class="col-4">
+        <p>Nhập vào số ngày làm</p>
+        <input id="ngayLam" class="form-control" value="">
+        </div>
+        <div class="col-4 ">
+            <button id="btnTinhTien" class="btn btn-success" onclick="tinhLuong()">Tính tiền</button>
+    </div>
+    <div class="form-group pt-3">
+        <p class="alert alert-success">
+            Tổng Tiền Lương : <span id="tongLuong">0 đồng</span> đồng
+        </p>
+    </div>
+    <h3 class="alert alert-warning">
+        Bài tập 2 : Tính giá trị trung bình 
+        <p>Viết chương trình nhập vào 5 số thực</p>
+        <p>tính giá trị trung bình của 5 số này  và xuất ra màn hình </p>
+    </h3>
+    <div class="from-group row">
+        <div class="col-2">
+        <p>Nhập vào Số thứ nhất</p>
+        <input id="soThu1" class="form-control" value="">
+        </div>
+        <div class="col-2">
+        <p>Nhập vào số thứ hai</p>
+        <input id="soThu2" class="form-control" value="">
+        </div>
+        <div class="col-2">
+        <p>Nhập vào số thứ ba</p>
+        <input id="soThu3" class="form-control" value="">
+        </div>
+        <div class="col-2">
+        <p>Nhập vào số thứ bốn</p>
+        <input id="soThu4" class="form-control" value="">
+        </div>
+        <div class="col-2">
+        <p>Nhập vào số thứ năm</p>
+        <input id="soThu5" class="form-control" value="">
+        </div>
+
+        <div class="col-2 ">
+            <button id="btnTinhTien" class="btn btn-success" onclick="tinhTrungBinh()">Kết Quả</button>
+        </div>
+        <div class="form-group pt-3">
+            <p class="alert alert-success ">
+                Giá Trị Trung Bình: <span id="trungBinh"></span> 
+            </p>
+        </div>
+        <h3 class="alert alert-warning">
+            Bài tập 3 Quy Đổi Tiền
+            <p>Giá USD hiện nay là 23.500</p>
+            <p>Viết Chương Trình Quy Đổi USD sang VND</p>
+            <p>Cho người dùng nhập vào số tiền usd</p>
+            <p>tính và xuất ra số tiền sau quy đổi  VND</p>
+        </h3>
+        <div class="from-group row">
+            <div class="col-6">
+            <p>Nhập Vào Số USD Muốn Quy Đổi</p>
+            <input id="tienUsd" class="form-control" value="">
+            </div>
+            <div class="col-4 ">
+                <button id="btnTinhTien" class="btn btn-success" onclick="tienQuyDoi()">Tính tiền</button>
+        </div>
+        <div class="form-group pt-3">
+            <p class="alert alert-success">
+                Số Tiền Quy Đổi: <span id="tienDaDoi">0 đồng</span> đồng
+            </p>
+        </div>
+        <h3 class="alert alert-warning">
+            Bài tập 4 Tính diện tích, chu vi hình chữ nhật
+            <p>Viết chương trình nhập vào chiều dài và chiều rộng của hình chữ nhật </p>
+            <p>tính và xuất ra diện tích và chu vi của hình chữ nhật đó</p>
+            <p>công thức :
+                <p>diện tích = dài * rộng</p>
+                <p>chu vi = ( dài + rộng) * 2</p>
+            </p>
+        </h3>
+        <div class="from-group row">
+            <div class="col-4">
+            <p>Nhập vào Chiều Dài</p>
+            <input id="chieuDai" class="form-control" value="">
+            </div>
+            <div class="col-4">
+            <p>Nhập vào Chiều Rộng</p>
+            <input id="chieuRong" class="form-control" value="">
+            </div>
+            <div class="col-4 ">
+                <button id="btnTinhTien" class="btn btn-success" onclick="tinhDoDai()">Kết Quả</button>
+        </div>
+        <div class="form-group pt-3">
+            <p class="alert alert-success">
+                Tổng Diện Tích : <span id="tongDT"></span>
+            </p>
+            <p class="alert alert-success">
+                Tổng Chu Vi  : <span id="tongCV"></span> 
+            </p>
+        </div>
+        <h3 class="alert alert-warning">
+            Bài tập 5 Tính tổng 2 ký số
+            <p>Viết chương trình nhập vào số có 2 chữ số (VD: 12 ,23 ,34) </p>
+            <p>Tính tông  số vừa nhập</p>
+            <p>Ví Dụ :
+                <p>12 => tổng là 1 + 2 = 3 </p>
+                <p>44 => tổng là 4 + 4 = 8</p>
+            </p>
+        </h3>
+        <div class="from-group row">
+            <div class="col-4">
+            <p>Nhập vào số có 2 chữ số</p>
+            <input id="so2Chu" class="form-control" value="">
+            </div>
+            <div class="col-4 ">
+                <button id="btnTinhTien" class="btn btn-success" onclick="tinhTong2So()">Kết Quả</button>
+        </div>
+        <div class="form-group pt-3">
+            <p class="alert alert-success">
+                Tổng Số vừa nhập: <span id="tongSo"></span>
+            </p>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <script src="/index.js"></script>
+</body>
+
+</html>
